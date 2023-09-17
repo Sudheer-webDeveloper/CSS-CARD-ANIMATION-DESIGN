@@ -1,0 +1,175 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ddd;
+}
+
+.card{
+ 
+    width: 300px; 
+    display: flex;
+    /* align-items: flex-start; */
+    text-align: center;
+    flex-direction: column;
+    /* border: 2px solid black; */
+    padding: 30px;
+    border-radius: 10px;
+    background: rgb(250, 250, 250);
+    box-shadow: 0 0 10px rgba(22, 22, 22, 0.22);
+    position: relative;
+    z-index: 1;
+    margin-right: 30px;
+    
+}
+.card:nth-child(2)::after{
+    background: rgb(61, 17, 221);
+
+}
+.card:nth-child(3)::after{
+    background: rgb(17, 221, 58);
+    
+}
+.card::after{
+    content: "";
+    width: 200px;
+    height: 200px;
+    background: rgb(221, 61, 17);
+    position: absolute;
+    border-bottom-left-radius: 120%;
+    border-top-right-radius: 10px;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    transition: width 0.3s , transform 0.3s;
+}
+
+
+.card:hover::after{
+    width:300px;
+    
+}
+.card .first{
+    margin-bottom: 15px;
+}
+
+.card::before{
+    content: "NIKE";
+    font-style: italic;
+    font-weight: 600;
+    font-size: 122px;
+    position: absolute;
+    top: 20%;
+    right: 10px;
+    bottom: 100%;
+    opacity: 0.4;
+   color: aliceblue;
+   filter: drop-shadow(0 0 1px rgba(37, 36, 36, 0.506));
+}
+/* .card:hover{
+    background: rgb(186, 120, 146);
+    color: white;
+} */
+
+.card:hover img{
+    filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.467));
+}
+
+
+.card img{
+    width: 250px;
+    height: 250px;
+    filter: drop-shadow(0 0 0 );
+}
+
+.card h1{
+    font-size: 23px;
+    font-weight: 400;
+    margin-top: 10px;
+}
+
+
+.card .second{
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.second .size{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+.size h2{
+    margin-right: 25px;
+    font-weight: normal;
+}
+
+.second .square{
+    margin-right: 5px;
+    color: #fff;
+    background: black;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+
+}
+
+.second .color{
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+}
+.color h2{
+    margin-right: 25px;
+    font-weight: normal;
+}
+
+.color .circle{
+    margin-right: 5px;
+    width: 20px;
+    height: 20px;
+    background: pink;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.circle:nth-child(2){
+    background: rgb(248, 183, 4);
+}
+.circle:nth-child(3){
+    background: blue;
+}
+
+.second button{
+    color: white;
+    background: black;
+    padding: 5px;
+    border-radius: 8px;
+    margin: 10px 0;
+    border: none;
+    outline: none;
+    width: 140px;
+    height: 40px;
+    cursor:pointer;
+}
+
+.second{
+    display: none;
+}
+.card:hover .second{
+    display: block;  
+}
